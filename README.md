@@ -9,7 +9,7 @@ This is a high level wrapper around Go's implementation of [NaCl](http://nacl.cr
     import (
       "fmt"
 
-      "github.firehost.co/chinkley/go-nacl/secretbox"
+      "github.com/hink/go-nacl/secretbox"
     )
 
     func main() {
