@@ -85,18 +85,14 @@ passphrase
       // Message to Encrypt
       message := "This is a super top secret message."
 
-      // Create encryption key from passphrase
-      secret := "This is a secret phrase"
-      key, _ := secretbox.KeyFromPassphrase(secret)
-
       // Encrypt
-      ciphertext, err := secretbox.Encrypt(key, []byte(message))
+      ciphertext, err := secretbox.EncryptWithSecret(secret, []byte(message))
       if err != nil {
         panic(err)
       }
 
       // Decrypt
-      plaintext, err := secretbox.Decrypt(key, ciphertext)
+      plaintext, err := secretbox.DecryptWithSecret(key, ciphertext)
       if err != nil {
         panic(err)
       }
