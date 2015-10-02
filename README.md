@@ -92,7 +92,7 @@ passphrase
       }
 
       // Decrypt
-      plaintext, err := secretbox.DecryptWithSecret(key, ciphertext)
+      plaintext, err := secretbox.DecryptWithSecret(secret, ciphertext)
       if err != nil {
         panic(err)
       }
